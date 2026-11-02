@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #08090d;
+    font-family: Arial;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card {
+    width: 180px;
+    height: 180px;
+    background-color: #15171d;
+    border: 1px solid #292c34;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: move 1s infinite alternate;
+}
+.dots span:nth-child(1) {
+    background-color: #ff6b67;
+}
+.dots span:nth-child(2) {
+    background-color: #ffc34d;
+    animation-delay: 0.3s;
+}
+.dots span:nth-child(3) {
+    background-color: #39d9ed;
+    animation-delay: 0.6s;
+}
+@keyframes move {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+.shape {
+    width: 35px;
+    height: 35px;
+    background-color: #9274ff;
+    border-radius: 50%;
+    animation: rotate 2s infinite alternate;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        border-radius: 50%;
+    }
+    to {
+        transform: rotate(45deg);
+        border-radius: 8px;
+    }
+}
+.card h3 {
+    color: white;
+    font-size: 14px;
+}
